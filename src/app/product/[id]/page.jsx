@@ -17,7 +17,7 @@ export default async function ProductPage({ params }) {
     return (
       <div className="container mx-auto px-4 py-16 text-center">
         <h1 className="text-2xl font-light mb-4">Product not found</h1>
-        <Button type="button" asChild>
+        <Button type="button" name="browse-all" asChild>
           <Link href="/collection/all">Browse all products</Link>
         </Button>
       </div>
@@ -121,10 +121,10 @@ export default async function ProductPage({ params }) {
 
           {/* Action Buttons */}
           <div className="space-y-3">
-            <Button type="button" className="w-full" size="lg" disabled={product.quantity === 0}>
+            <Button type="button" name="add-to-cart" className="w-full" size="lg" disabled={product.quantity === 0}>
               {product.quantity === 0 ? "Sold out" : "Add to cart"}
             </Button>
-            <Button type="button" variant="outline" className="w-full" size="lg">
+            <Button type="button" name="add-to-wishlist" variant="outline" className="w-full" size="lg">
               <Heart className="w-4 h-4 mr-2" />
               Add to wishlist
             </Button>

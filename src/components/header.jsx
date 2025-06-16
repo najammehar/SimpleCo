@@ -76,16 +76,17 @@ export default function Header() {
           {/* Right side icons */}
           <div className="flex items-center space-x-4">
             <span className="hidden sm:block text-xs">Australia | AUD $</span>
-            <button type="button" className="p-2 hover:bg-gray-100 rounded-full">
+            <button type="button" name="search" className="p-2 hover:bg-gray-100 rounded-full">
               <Search className="w-5 h-5" />
             </button>
-            <button type="button" className="p-2 hover:bg-gray-100 rounded-full">
+            <button type="button" name="account" className="p-2 hover:bg-gray-100 rounded-full">
               <User className="w-5 h-5" />
             </button>
-            <button type="button" className="p-2 hover:bg-gray-100 rounded-full">
+            <button type="button" name="cart" className="p-2 hover:bg-gray-100 rounded-full">
               <ShoppingCart className="w-5 h-5" />
             </button>
             <button 
+              name="mobile-menu"
               type="button"
               className="md:hidden p-2 hover:bg-gray-100 rounded-full"
               onClick={toggleMobileMenu}

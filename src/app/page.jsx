@@ -45,7 +45,7 @@ export default async function HomePage() {
           ))}
         </div>
         <div className="text-center">
-          <Button type="button" asChild variant="outline" className="bg-black text-white hover:text-white hover:bg-black/80">
+          <Button type="button" name="view-all" asChild variant="outline" className="bg-black text-white hover:text-white hover:bg-black/80">
             <Link href="/collection/all">View all</Link>
           </Button>
         </div>

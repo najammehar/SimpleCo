@@ -27,7 +27,7 @@ export default function Footer() {
             </div>
 
             <div className="lg:ml-auto">
-              <Button type="button" className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-full flex items-center gap-2">
+              <Button type="button" name="follow-on-shop" className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-full flex items-center gap-2">
                 <Heart className="w-4 h-4 fill-current" />
                 Follow on Shop
               </Button>
@@ -44,7 +44,7 @@ export default function Footer() {
             <div>
               <h3 className="text-sm text-gray-600 mb-4">Country/region</h3>
               <div className="relative">
-                <select type="select" className="appearance-none border border-gray-300 px-4 py-2 pr-10 bg-white text-sm min-w-[180px]">
+                <select type="select" label='Country/region' className="appearance-none border border-gray-300 px-4 py-2 pr-10 bg-white text-sm min-w-[180px]">
                   <option>Australia | AUD $</option>
                   <option>United States | USD $</option>
                   <option>United Kingdom | GBP £</option>
@@ -78,7 +78,7 @@ export default function Footer() {
                 </div>
 
                 {/* PayPal */}
-                <div className="w-12 h-8 bg-blue-400 flex items-center justify-center">
+                <div className="w-12 h-8 bg-blue-800 flex items-center justify-center">
                   <span className="text-white text-xs font-bold">PP</span>
                 </div>
 
@@ -88,7 +88,7 @@ export default function Footer() {
                 </div>
 
                 {/* Union Pay */}
-                <div className="w-12 h-8 bg-blue-400 flex items-center justify-center">
+                <div className="w-12 h-8 bg-blue-800 flex items-center justify-center">
                   <span className="text-white text-xs font-medium">UP</span>
                 </div>
 
