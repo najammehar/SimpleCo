@@ -17,7 +17,7 @@ export default async function ProductPage({ params }) {
     return (
       <div className="container mx-auto px-4 py-16 text-center">
         <h1 className="text-2xl font-light mb-4">Product not found</h1>
-        <Button asChild>
+        <Button type="button" asChild>
           <Link href="/collection/all">Browse all products</Link>
         </Button>
       </div>
@@ -72,6 +72,7 @@ export default async function ProductPage({ params }) {
                 <div className="flex gap-2">
                   {product.color.map((color) => (
                     <button
+                      type="button"
                       key={color}
                       className="w-8 h-8 border-2 border-gray-300 hover:border-gray-500 transition-colors"
                       style={{ backgroundColor: color }}
@@ -85,7 +86,7 @@ export default async function ProductPage({ params }) {
             {/* Size */}
             <div>
               <label className="block text-sm font-medium mb-2">Size</label>
-              <Select>
+              <Select type="select">
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select size" />
                 </SelectTrigger>
@@ -100,7 +101,7 @@ export default async function ProductPage({ params }) {
             {/* Quantity */}
             <div>
               <label className="block text-sm font-medium mb-2">Quantity</label>
-              <Select>
+              <Select type="select">
                 <SelectTrigger className="w-24">
                   <SelectValue placeholder="1" />
                 </SelectTrigger>
@@ -120,10 +121,10 @@ export default async function ProductPage({ params }) {
 
           {/* Action Buttons */}
           <div className="space-y-3">
-            <Button className="w-full" size="lg" disabled={product.quantity === 0}>
+            <Button type="button" className="w-full" size="lg" disabled={product.quantity === 0}>
               {product.quantity === 0 ? "Sold out" : "Add to cart"}
             </Button>
-            <Button variant="outline" className="w-full" size="lg">
+            <Button type="button" variant="outline" className="w-full" size="lg">
               <Heart className="w-4 h-4 mr-2" />
               Add to wishlist
             </Button>

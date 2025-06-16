@@ -25,6 +25,7 @@ export default async function HomePage() {
           <div className="text-center text-white">
             <h1 className="text-4xl md:text-6xl font-light mb-8">Sophisticated designs in time</h1>
             <Button
+              type="button"
               asChild
               variant="outline"
               className="bg-transparent border-white text-white hover:bg-white hover:text-black"
@@ -44,7 +45,7 @@ export default async function HomePage() {
           ))}
         </div>
         <div className="text-center">
-          <Button asChild variant="outline" className="bg-black text-white hover:text-white hover:bg-black/80">
+          <Button type="button" asChild variant="outline" className="bg-black text-white hover:text-white hover:bg-black/80">
             <Link href="/collection/all">View all</Link>
           </Button>
         </div>

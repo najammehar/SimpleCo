@@ -129,6 +129,7 @@ export default function CollectionClient({ category, searchParams, products, met
         <div className="flex items-center gap-4">
           <span className="text-sm">Sort by:</span>
           <Select
+            type="select"
             value={currentSort}
             onValueChange={(value) => {
               window.location.href = createFilterUrl({ sort: value })

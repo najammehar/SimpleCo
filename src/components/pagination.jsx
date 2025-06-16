@@ -20,7 +20,7 @@ export default function Pagination({ currentPage, totalPages, basePath, searchPa
     <div className="flex justify-center items-center gap-2 mt-12">
       {/* Previous Button */}
       {currentPage > 1 && (
-        <Button asChild variant="outline" size="sm">
+        <Button type="button" asChild variant="outline" size="sm">
           <Link href={createPageUrl(currentPage - 1)}>
             <ChevronLeft className="w-4 h-4 mr-1" />
             Previous
@@ -50,6 +50,7 @@ export default function Pagination({ currentPage, totalPages, basePath, searchPa
           return (
             <Button
               key={pageNum}
+              type="button"
               asChild
               variant={pageNum === currentPage ? "default" : "outline"}
               size="sm"
@@ -63,7 +64,7 @@ export default function Pagination({ currentPage, totalPages, basePath, searchPa
 
       {/* Next Button */}
       {currentPage < totalPages && (
-        <Button asChild variant="outline" size="sm">
+        <Button type="button" asChild variant="outline" size="sm">
           <Link href={createPageUrl(currentPage + 1)}>
             Next
             <ChevronRight className="w-4 h-4 ml-1" />
