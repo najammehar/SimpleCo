@@ -9,7 +9,7 @@ export default function ProductCard({ product }) {
 
     // Use small format if available, otherwise use the original
     const imageUrl = image.formats?.small?.url || image.url
-    return `http://localhost:1337${imageUrl}`
+    return `${process.env.NEXT_SITE_URL}${imageUrl}`
   }
 
   return (
